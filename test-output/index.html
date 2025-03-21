@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-MySuite" class="navigator-link ">
-                    <span>C:\Users\Ashutosh Patil\eclipse-workspace\Opencart\mastersuite.xml</span>
+                    <span>C:\Users\Ashutosh Patil\eclipse-workspace\Opencart\grid-docker.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -105,11 +105,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-MySuite" title="testcases.TC_002_LoginTest" class="method navigator-link" hash-for-method="verifymyaccountpagedisplayed">verifymyaccountpagedisplayed</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-MySuite" title="testcases.TC_001_Registration" class="method navigator-link" hash-for-method="verifyregistration">verifyregistration</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-MySuite -->
@@ -139,25 +134,10 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-MySuite-class-passed -->
-          <div class="suite-MySuite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testcases.TC_001_Registration</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyregistration">
-                  </a> <!-- verifyregistration -->
-                  <span class="method-name">verifyregistration</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-MySuite-class-passed -->
         </div> <!-- panel MySuite -->
         <div panel-name="test-xml-MySuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Ashutosh Patil\eclipse-workspace\Opencart\mastersuite.xml</span>
+            <span class="header-content">C:\Users\Ashutosh Patil\eclipse-workspace\Opencart\grid-docker.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -167,14 +147,13 @@
   &lt;listeners&gt;
     &lt;listener class-name=&quot;utilities.ExtentReportManager&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; verbose=&quot;2&quot;&gt;
-    &lt;parameter name=&quot;os&quot; value=&quot;windows&quot;/&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;edge&quot;/&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;chrome-node&quot; verbose=&quot;2&quot;&gt;
+    &lt;parameter name=&quot;os&quot; value=&quot;linux&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testcases.TC_001_Registration&quot;/&gt;
       &lt;class name=&quot;testcases.TC_002_LoginTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- chrome-node --&gt;
 &lt;/suite&gt; &lt;!-- MySuite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -186,7 +165,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">chrome-node (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -203,10 +182,6 @@
                 <span class="method-in-group-name">verifymyaccountpagedisplayed</span>
                 <br/>
               </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">verifyregistration</span>
-                <br/>
-              </div> <!-- method-in-group -->
             </div> <!-- test-group -->
             <div class="test-group">
               <span class="test-group-name">regression</span>
@@ -215,20 +190,12 @@
                 <span class="method-in-group-name">verifymyaccountpagedisplayed</span>
                 <br/>
               </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">verifyregistration</span>
-                <br/>
-              </div> <!-- method-in-group -->
             </div> <!-- test-group -->
             <div class="test-group">
               <span class="test-group-name">sanity</span>
               <br/>
               <div class="method-in-group">
                 <span class="method-in-group-name">verifymyaccountpagedisplayed</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">verifyregistration</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -248,20 +215,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyregistration')
-data.setCell(0, 2, 'testcases.TC_001_Registration')
-data.setCell(0, 3, 5967);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifymyaccountpagedisplayed')
-data.setCell(1, 2, 'testcases.TC_002_LoginTest')
-data.setCell(1, 3, 1682);
+data.setCell(0, 1, 'verifymyaccountpagedisplayed')
+data.setCell(0, 2, 'testcases.TC_002_LoginTest')
+data.setCell(0, 3, 2343);
 window.suiteTableData['MySuite']= { tableData: data, tableDiv: 'times-div-MySuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-MySuite">
               </div> <!-- times-div-MySuite -->
             </div> <!-- times-div -->
@@ -287,33 +250,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testcases.TC_001_Registration</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testcases.TC_002_LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setup(edge, windows)</span>
+                <span class="method-name">setup(chrome, linux)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">verifyregistration</span>
-                <span class="method-start">7515 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">13522 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testcases.TC_002_LoginTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setup(edge, windows)</span>
-                <span class="method-start">15078 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
                 <span class="method-name">verifymyaccountpagedisplayed</span>
-                <span class="method-start">18751 ms</span>
+                <span class="method-start">6830 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">20435 ms</span>
+                <span class="method-start">9202 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -80,8 +80,7 @@ public class BaseClass {
         	//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cp);
         	
         //	driver=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cp);
-        	driver = new RemoteWebDriver(URI.create("http://localhost:4444/wd/hub").toURL(), cp);
-
+        	driver = new RemoteWebDriver(URI.create("http://localhost:4444/").toURL(), cp);
         	
         }
         

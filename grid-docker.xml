@@ -5,15 +5,15 @@
 		<listener class-name="utilities.ExtentReportManager"></listener>
 	</listeners>
 	<test thread-count="5" name="chrome-node">
-		<parameter name="browser" value="chrome"></parameter>
+
 		<parameter name="os" value="linux"></parameter><!--changed the os-->
+		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="testcases.TC_001_Registration "/>
+			<!--<class name="testcases.TC_001_Registration " />-->
 			<class name="testcases.TC_002_LoginTest" />
 			<!--<class name="testcases.TC_003_LoginDDT"/>-->
 		</classes>
-	</test> <!--
-	Test -->
+	</test>
 
 	<!--On different node than above-->
 

@@ -1,0 +1,66 @@
+******For selenium grid standalone setup need*****
+1)Download selenium-server-4.29.0.jar
+2)Open cmd that that location where you placed jar file and Run it throw following command 
+		java -jar selenium-server-<version>.jar standalone
+		
+3)URL to see sessions --->http://localhost:4444/
+
+----------------------------------------------------------------------------------------------------------------
+*********For Docker setup (Run test cases on Docker with selenium grid setup)********
+1)Download docker
+You can run Docker commands from any location in the terminal or command prompt
+2)Download images --docker images
+3)Downloading particular image-- docker pull <image name>
+
+For Hub and Node creation on docker {1 HUB, 2 NODES}
+1)Download images- docker pull selenium/hub
+					docker pull selenium/node-chrome
+					docker pull selenium/node-firefox
+2)Before Creating containers of that images create network all the containers should be part of one netwok
+# Create a Docker network named grid
+docker network create grid(You can give any network name like grid ,grid setup)
+
+3)Creating containers of that images
+# Run Selenium Hub container
+docker run -d -p 4442-4444:4442-4444 --net grid --name selenium-hub selenium/hub
+
+# Run Selenium Node Chrome container
+docker run -d --net grid -e SE_EVENT_BUS_HOST=selenium-hub -e SE_EVENT_BUS_PUBLISH_PORT=4442 -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 selenium/node-chrome
+
+# Run Selenium Node Firefox container
+docker run -d --net grid -e SE_EVENT_BUS_HOST=selenium-hub -e SE_EVENT_BUS_PUBLISH_PORT=4442 -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 selenium/node-firefox
+
+Run through xml file
+
+Instead of deleting commands just stop them from UI or command cause if want to run in future containers will require
+----------------------------------------------------------------------------------------------------------------
+
+The above process is lengthy because you have to run commands manually then , if so many nodes are there we have to execute then it is tedious task
+to overcome this docker provided docker-compose.yaml file create that file and state the NETWORK HUB NODE 
+place it somewhere in project---BETTER TO KEEP IN SRC/TEST/RESOURCES
+
+1)open cmd at that location 
+2)docker-compose up--execute yaml file
+3)run test cases using xml file can see the sessions created in grid 
+---------------------------------------------------------------------------------------------------------------
+
+*****************RUN PROJECT THOROUGH JENKINS******************************
+1)Download jenkins.war file 
+2)Place at some location 
+3)Open cmd at that location and run that jenkins.war file
+4)Install plugin and all 
+3)Install maven 
+4)Inside tools we have to give path of 1)Java JDK  2)Git 3)maven 
+5)Click on new Item 
+6)Select as maven project
+7)Under source code management Select git and give repo URL 
+8)Inside Build which xml file want to run give it by default pom.xml will appear 
+9)Give test in Goals and Options 
+10)Ready to run
+
+After some days want to run project again through jenkins then 
+1)NO need of setting all the things
+2)Just execute jenkins.war file -- Jenkins is fully up and running display
+3)Then localhost:8080/ type in search engine then dashboard will be accessed of jenkins
+
+
