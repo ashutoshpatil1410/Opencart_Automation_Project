@@ -19,7 +19,7 @@ This is a sample Selenium Automation Framework developed using Java, TestNG, Mav
 ## How to Run
 1. Clone this repository:
    ```bash
-   https://github.com/ashutoshpatil1410/selenium_concepts.git
+   https://github.com/ashutoshpatil1410/Opencart_Automation_Project.git 
 2. Import as Maven Project in IntelliJ or Eclipse
 3. Update test data/config if needed
 4. Run test using `pom.xml` by selecting as maven test / customize the pom under suiteXmlFile tag and run the test which you want
