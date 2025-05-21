@@ -1,6 +1,6 @@
 # Selenium Automation Framework
 
-This is a sample Selenium Automation Framework developed using Java, TestNG, Maven, and Extent Reports.
+This is a Selenium Automation Framework developed using Java, TestNG, Maven, and Extent Reports .
 
 ## Technologies Used
 - Java
